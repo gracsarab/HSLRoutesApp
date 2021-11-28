@@ -125,6 +125,24 @@ var Hello = /** @class */ (function (_super) {
     return Hello;
 }(React.Component));
 exports.Hello = Hello;
+//componentDidMount() {
+//    const requestOptions = {
+//        method: 'POST',
+//        headers: { 'Content-Type': 'application/json' },
+//        body: {
+//            "query": "{
+//                stop(id: \"HSL:1173434\") {
+//                    name
+//                    lat
+//                    lon
+//                }
+//            }"
+//        }
+//    };
+//fetch('https://api.digitransit.fi/routing/v1/routers/finland/index/graphql', requestOptions)
+//    .then(response => response.json())
+//    .then(data => this.setState({ postId: data.id }));
+//}
 ReactDOM.render(React.createElement(Hello, null), document.getElementById('root'));
 
 

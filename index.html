@@ -8,6 +8,58 @@
 <body>
     <div id="root"></div>
     <!-- scripts -->
+    <script>
+        console.log("hello");
+
+/*        const data = `{
+            routes(name: "10") {
+                shortName
+                longName
+                mode
+            }
+        }`;*/
+
+        const data = `{
+              plan(
+                from: {lat: 60.168992, lon: 24.932366}
+                to: {lat: 60.175294, lon: 24.684855}
+                numItineraries: 3
+              ) {
+                itineraries {
+                  legs {
+                    startTime
+                    endTime
+                    mode
+                    duration
+                    agency {
+                      name
+                    }
+                    realTime
+                    route {
+                      shortName
+                      longName
+                      stops {
+                        name
+                      }
+                    }
+                  }
+                }
+              }
+            }`;
+
+        const hslurl = 'https://api.digitransit.fi/routing/v1/routers/hsl/index/graphql';
+
+        fetch(hslurl, {
+            method: "POST",
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ query: data })
+        })
+            .then(res => res.json())
+            .then((result) => console.log(result.data.plan));
+
+            //.then((result) => console.log(result.data.routes));
+
+    </script>
     <div>
         <label for="origin">Origin:</label><br>
         <input type="text" id="origin" name="origin"><br>
@@ -15,6 +67,7 @@
         <input type="text" id="destination" name="destination"><br>
         <input type="submit" value="Submit">
     </div>
+
     <!--make a div for displaying the results-->
     <script src="./dist/app-bundle.js"></script>
 </body>
