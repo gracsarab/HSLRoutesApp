@@ -1,0 +1,2 @@
+C:\Users\AcademyPgh\source\repos\HSLRoutesApp\obj\Debug\HSLRoutesApp.njsprojAssemblyReference.cache
+C:\Users\AcademyPgh\source\repos\HSLRoutesApp\bin\Microsoft.NodejsTools.WebRole.dll
